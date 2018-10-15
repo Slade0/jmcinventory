@@ -8,6 +8,7 @@ class Users extends CI_Controller {
         $this->load->helper('authit');
         $this->config->load('authit');
         $this->load->model('users_model');
+        $this->load->model('inventory_model');
         $this->load->helper('html_helper');
         $this->load->helper('url_helper');
         $this->load->library('session');
@@ -15,20 +16,39 @@ class Users extends CI_Controller {
 
     public function dashboard() {
         if(!logged_in()) redirect('auth/login');
-        echo "Weclome back " . user('id');
-        echo "<br>";
-        echo "<br>Your role is " . user('role_id');
-        echo "<br>";
-        echo "<br><a href=''>Make a Reservation</a>";
-        echo "<br><a href=''>View Current Inventory</a>";
-        echo "<br><a href=''>Add Items to Inventory</a>";
-        echo "<br>";
-        echo "<br>Software Web Dev 2 Team:";
-        echo "<br>";
-        echo "<br>Edgar Flores";
-        echo "<br>Roland Burks";
-        echo "<br>Slade Davidson";
-        echo "<br>Andrew Reville";
+        switch (user('role_id')) {
+            case Users_model::DEFAULT_USER:
+                $data['reservations'] = $this->users_model->getreservations(user('id'));
+                $data['title'] = "User dashboard";
+                $this->load->view("templates/header",$data);
+                $this->load->view("users/userdashboard",$data);
+                $this->load->view("templates/footer");
+                break;
+            case Users_model::WORKER_USER:
+                $data['reservations'] = $this->users_model->getallreservations();
+                $data['title'] = "Worker dashboard";
+                $this->load->view("templates/header",$data);
+                $this->load->view("users/workerdashboard",$data);
+                $this->load->view("templates/footer");
+                break;
+            case Users_model::ADMIN_USER:
+                $data['reservations'] = $this->users_model->getallreservations();
+                $data['items'] = $this->inventory_model->getallitems();
+                $data['users'] = $this->users_model->getallusers();
+                $data['title'] = "Admin dashboard";
+                $this->load->view("templates/header",$data);
+                $this->load->view("users/admindashboard",$data);
+                $this->load->view("templates/footer");
+                break;
+        }
+        
+    }
+    
+    // user should already be logged in
+    public function mobile_getreservations() {
+        $reservations = $this->users->getreservations(user('id'));
+        echo json_encode($reservations);
         exit;
     }
+    
 }

@@ -1,0 +1,20 @@
+<?php 
+    if($error) echo '<p class="error">'. $error .'</p>';
+    echo form_open(); 
+    echo form_label('Serial', 'serial') .'<br />';
+    echo form_input(array('name' => 'serial', 'value' => set_value('serial'))) .'<br />';
+    echo form_error('serial');
+    echo form_label('Item Title', 'description') .'<br />';
+    echo form_input(array('name' => 'description', 'value' => set_value('description'))) .'<br />';
+    echo form_label('Accessories (one accessory per line, blank lines will be ignored)', 'accessories') .'<br />';
+    echo form_input(array('name' => 'accessories[]')) .'<br />';
+    echo form_input(array('name' => 'accessories[]')) .'<br />';
+    echo form_input(array('name' => 'accessories[]')) .'<br />';
+    echo form_input(array('name' => 'accessories[]')) .'<br />';
+    echo form_input(array('name' => 'accessories[]')) .'<br />';
+    echo form_input(array('name' => 'accessories[]')) .'<br />';
+    echo form_input(array('name' => 'accessories[]')) .'<br />';
+    echo form_input(array('name' => 'accessories[]')) .'<br />';
+    echo form_input(array('name' => 'accessories[]')) .'<br />';
+    echo form_submit(array('type' => 'submit', 'value' => 'Add'));
+    echo form_close();
