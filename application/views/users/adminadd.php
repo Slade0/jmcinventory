@@ -17,8 +17,8 @@
       echo form_password(array('name' => 'password_conf', 'value' => set_value('password_conf'))) .'<br />';
       echo form_error('password_conf');
       echo form_submit(array('type' => 'submit', 'value' => isset($user)?'Save':'Add'));
+      echo '<br /><br />';
+      echo form_submit(array('type' => 'button', 'value' => 'Back to Dashboard', 'onClick' => "window.location.href='http://localhost:8080/jmcinventory/users/dashboard'"));
       echo form_close();
       ?>
 </h4>
-
-<p id="logoutam"><a href="<?php echo site_url('auth/logout'); ?>">Log Out</a></p>

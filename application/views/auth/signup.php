@@ -13,6 +13,7 @@
     echo form_label('Confirm Password', 'password_conf') . '<br />';
     echo form_password(array('name' => 'password_conf', 'value' => set_value('password_conf'))) . '<br />';
     echo form_error('password_conf');
+		echo '<br />';
     echo form_submit(array('type' => 'submit', 'value' => 'Sign Up'));
     echo form_close();
     ?>

@@ -8,6 +8,7 @@
 	    echo form_label('Email Address', 'email') .'<br />';
 	    echo form_input(array('name' => 'email', 'value' => set_value('email'))) .'<br />';
 	    echo form_error('email');
+			echo '<br />';
 	    echo form_submit(array('type' => 'submit', 'value' => 'Reset Password'));
 	    echo form_close();
     }

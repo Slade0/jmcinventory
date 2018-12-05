@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 body {
-    background:#ffffff;
+    background:#CDCDCD;
 }
 
 
@@ -55,33 +55,99 @@ div#containerdiv {
 
 h1 {
   text-align: center;
+  color: white;
+  background: #1418BB;
+  padding: 15px 15px;
 }
 
 h4#login{
   text-align: center;
-  font-weight: normal;
+  font-weight: bold;
+  color: #3135D6;
+  font-size: 18px;
+  line-height: 1.3;
 }
 
 p#login{
   text-align: center;
+  border: none;
+}
+
+p#login a {
+  text-decoration: none;
+  color: white;
+  background-color: #5356E1;
+  padding: 15px 30px;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #A5A7F4;
+  transition-duration: 0.3s;
+}
+
+p#login a:hover {
+  background-color: #A5A7F4;
+  color: white;
 }
 
 h4#signup{
   text-align: center;
-  font-weight: normal;
+  font-weight: bold;
+  color: #3135D6;
+  font-size: 18px;
+  line-height: 1.3;
 }
 
 p#signup{
   text-align: center;
+  border: none;
 }
 
-h4#forgotpassword{
+p#signup a {
+  text-decoration: none;
+  color: white;
+  background-color: #5356E1;
+  padding: 15px 30px;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #A5A7F4;
+  transition-duration: 0.3s;
+}
+
+p#signup a:hover {
+  background-color: #A5A7F4;
+  color: white;
+}
+
+h4#forgotpassword {
   text-align: center;
-  font-weight: normal;
+  font-weight: bold;
+  color: #3135D6;
+  font-size: 18px;
+  line-height: 1.3;
 }
 
 p#forgotpassword{
   text-align: center;
+  border: none;
+}
+
+p#forgotpassword a {
+  text-decoration: none;
+  color: white;
+  background-color: #5356E1;
+  padding: 15px 30px;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #A5A7F4;
+  transition-duration: 0.3s;
+}
+
+p#forgotpassword a:hover {
+  background-color: #A5A7F4;
+  color: white;
 }
 
 h4#adminadd{

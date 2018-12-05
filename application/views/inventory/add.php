@@ -17,4 +17,6 @@
         echo form_input(array('name' => 'accessories[]','value'=>(isset($item) && $item->accessories && $i<count($item->accessories))?$item->accessories[$i]:"")) .'<br />';
     }
     echo form_submit(array('type' => 'submit', 'value' => isset($item)?'Save':'Add'));
+    echo '<br /><br />';
+    echo form_submit(array('type' => 'button', 'value' => 'Back to Dashboard', 'onClick' => "window.location.href='http://localhost:8080/jmcinventory/users/dashboard'"));
     echo form_close();

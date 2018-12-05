@@ -9,6 +9,7 @@
     echo form_label('Password', 'password') . '<br />';
     echo form_password(array('name' => 'password', 'value' => set_value('password'))) . '<br />';
     echo form_error('password');
+    echo '<br />';
     echo form_submit(array('type' => 'submit', 'value' => 'Login'));
     echo form_close();
     ?>
