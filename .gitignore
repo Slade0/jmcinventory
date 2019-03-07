@@ -1,5 +1,5 @@
 .DS_Store
-application/config/config.php
+
 application/cache/*
 !application/cache/index.html
 
@@ -10,7 +10,6 @@ application/logs/*
 
 composer.lock
 
-user_guide/*
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
@@ -32,6 +31,3 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 /tests/results/
 /jmcinventory2/nbproject/private/
 /ajaxdemo/nbproject/private/
-
-## mac files
-*._*

@@ -84,8 +84,7 @@ class Authit_model extends CI_Model {
 		$this->dbforge->add_field('created DATETIME NOT NULL');
 		$this->dbforge->add_field('last_login DATETIME NULL');
 		$this->dbforge->create_table($this->users_table);
-	}
-	
+	}	
 }
 
 /* End of file: Authit_model.php */
